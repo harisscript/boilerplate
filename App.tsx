@@ -7,6 +7,7 @@
 
 import { NewAppScreen } from '@react-native/new-app-screen';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import ToastProvider from './src/app/ToastProvider';
 import {
   SafeAreaProvider,
   useSafeAreaInsets,
@@ -18,7 +19,9 @@ function App() {
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
+      <ToastProvider>
+        <AppContent />
+      </ToastProvider>
     </SafeAreaProvider>
   );
 }
