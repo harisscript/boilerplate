@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { AppConfig } from '../constants';
-import { getErrorMessage } from '../utils/error/errorHandler';
+import { AppConfig } from '@/constants';
+import { getErrorMessage } from '@/utils';
 
 const api = axios.create({
   baseURL: AppConfig.apiUrl,
